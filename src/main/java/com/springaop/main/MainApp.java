@@ -8,9 +8,12 @@ import com.springaop.employee.Employee;
 
 
 	public class MainApp {
-		public static void main(String[] args) {
+		public static void main(String[] args) throws Exception {
 			ApplicationContext appContext = new ClassPathXmlApplicationContext(new String[] { "spring-employee.xml" });
 			Employee employee = (Employee) appContext.getBean("employee");
 			employee.addEmployee();
+			employee.addEmployeeAround("priya");
+			employee.addEmployeeReturnValue();
+			employee.addEmployeeThrowException();
 }
 }

@@ -10,7 +10,7 @@ public class EmployeeImple implements Employee {
 		return "priya";
 	}
 	
-	public void addEmployeeThrowException() throws Exception {
+	public void addEmployeeThrowException()throws Exception {
 		System.out.println("addEmployeeThrowException");
 		throw new Exception("Error");
 	}
